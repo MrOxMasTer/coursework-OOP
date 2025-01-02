@@ -75,7 +75,7 @@ export const FormAddWarehouse = () => {
 				/>
 			</div>
 			<Button type="submit" disabled={isPending}>
-				Добавить склад
+				Add warehouse
 			</Button>
 		</form>
 	);

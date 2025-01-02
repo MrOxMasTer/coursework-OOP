@@ -8,21 +8,21 @@ export const tabs: Tab[] = [
 	{
 		value: "dashboard",
 		href: "/",
-		text: "Панель управления",
+		text: "Control Panel",
 	},
 	{
 		value: "warehouses",
 		href: "/warehouses",
-		text: "Склады",
+		text: "Warehouses",
 	},
 	{
 		value: "orders",
 		href: "/orders",
-		text: "Заказы",
+		text: "Orders",
 	},
 	{
 		value: "products",
 		href: "/products",
-		text: "Товары",
+		text: "Products",
 	},
 ];

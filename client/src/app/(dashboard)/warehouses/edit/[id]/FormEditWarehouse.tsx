@@ -63,7 +63,7 @@ export const FormEditWarehouse = ({
 			{/* FIXME: input? */}
 			<Input type="hidden" name="id" defaultValue={id} />
 			<div className="space-y-2">
-				<Label htmlFor="name">Название склада</Label>
+				<Label htmlFor="name">Name warehouse</Label>
 				<Input
 					id="name"
 					name="name"
@@ -73,7 +73,7 @@ export const FormEditWarehouse = ({
 				/>
 			</div>
 			<div className="space-y-2">
-				<Label htmlFor="capacity">Вместимость (м²)</Label>
+				<Label htmlFor="capacity">Capacity (м²)</Label>
 				<Input
 					id="capacity"
 					name="capacity"
@@ -84,7 +84,7 @@ export const FormEditWarehouse = ({
 				/>
 			</div>
 			<div className="space-y-2">
-				<Label htmlFor="location">Местоположение</Label>
+				<Label htmlFor="location">Location</Label>
 				<Input
 					id="location"
 					name="location"
@@ -94,7 +94,7 @@ export const FormEditWarehouse = ({
 				/>
 			</div>
 			<Button disabled={isPending} type="submit">
-				Обновить склад
+				Update warehouse
 			</Button>
 		</form>
 	);

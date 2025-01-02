@@ -6,7 +6,7 @@ export default function AddWarehousePage() {
 		<div className="container mx-auto p-4">
 			<Card>
 				<CardHeader>
-					<CardTitle>Добавление нового склада</CardTitle>
+					<CardTitle>Add new warehouse</CardTitle>
 				</CardHeader>
 				<CardContent>
 					<FormAddWarehouse />

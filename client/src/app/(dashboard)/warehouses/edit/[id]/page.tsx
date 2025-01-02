@@ -15,7 +15,7 @@ export default async function EditWarehouse({
 		<div className="container mx-auto p-4">
 			<Card>
 				<CardHeader>
-					<CardTitle>Редактирование склада</CardTitle>
+					<CardTitle>Edit warehouse</CardTitle>
 				</CardHeader>
 				<CardContent>
 					<FormEditWarehouse warehouse={warehouse} />

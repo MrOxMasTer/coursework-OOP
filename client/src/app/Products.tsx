@@ -24,21 +24,27 @@ import {
 const productsData = [
 	{
 		id: "001",
-		name: "Смартфон X",
-		category: "Электроника",
+		name: "smartphone X",
+		category: "Electronics",
 		price: 29999,
 		stock: 50,
 	},
 	{
 		id: "002",
-		name: "Ноутбук Y",
-		category: "Электроника",
+		name: "Notebook Y",
+		category: "Electronics",
 		price: 59999,
 		stock: 30,
 	},
-	{ id: "003", name: "Футболка Z", category: "Одежда", price: 999, stock: 100 },
-	{ id: "004", name: "Кроссовки A", category: "Обувь", price: 4999, stock: 80 },
-	{ id: "005", name: "Книга B", category: "Книги", price: 599, stock: 200 },
+	{
+		id: "003",
+		name: "T-shirts Z",
+		category: "Clothes",
+		price: 999,
+		stock: 100,
+	},
+	{ id: "004", name: "Sneakers A", category: "Shoes", price: 4999, stock: 80 },
+	{ id: "005", name: "Books B", category: "Books", price: 599, stock: 200 },
 ];
 
 export default function Products() {
@@ -54,33 +60,33 @@ export default function Products() {
 	return (
 		<Card>
 			<CardHeader>
-				<CardTitle>Управление товарами</CardTitle>
+				<CardTitle>Products management</CardTitle>
 			</CardHeader>
 			<CardContent>
 				<div className="space-y-4">
 					<div className="grid grid-cols-2 gap-4">
 						<div className="space-y-2">
-							<Label htmlFor="name-filter">Фильтр по названию</Label>
+							<Label htmlFor="name-filter">Filter by Name</Label>
 							<Input
 								id="name-filter"
-								placeholder="Введите название товара"
+								placeholder="Enter product name"
 								value={nameFilter}
 								onChange={(e) => setNameFilter(e.target.value)}
 							/>
 						</div>
 						<div className="space-y-2">
-							<Label htmlFor="category-filter">Фильтр по категории</Label>
+							<Label htmlFor="category-filter">Filter by category</Label>
 							<Select value={categoryFilter} onValueChange={setCategoryFilter}>
 								<SelectTrigger id="category-filter">
-									<SelectValue placeholder="Выберите категорию" />
+									<SelectValue placeholder="Select a category" />
 								</SelectTrigger>
 								<SelectContent>
 									{/* FIXME: null??? */}
-									<SelectItem value="null">Все категории</SelectItem>
-									<SelectItem value="Электроника">Электроника</SelectItem>
-									<SelectItem value="Одежда">Одежда</SelectItem>
-									<SelectItem value="Обувь">Обувь</SelectItem>
-									<SelectItem value="Книги">Книги</SelectItem>
+									<SelectItem value="null">All Categories</SelectItem>
+									<SelectItem value="Electronics">Electronics</SelectItem>
+									<SelectItem value="Clothes">Clothes</SelectItem>
+									<SelectItem value="Shoes">Shoes</SelectItem>
+									<SelectItem value="Books">Books</SelectItem>
 								</SelectContent>
 							</Select>
 						</div>
@@ -89,10 +95,10 @@ export default function Products() {
 						<TableHeader>
 							<TableRow>
 								<TableHead>ID</TableHead>
-								<TableHead>Название</TableHead>
-								<TableHead>Категория</TableHead>
-								<TableHead>Цена</TableHead>
-								<TableHead>На складе</TableHead>
+								<TableHead>Name</TableHead>
+								<TableHead>Category</TableHead>
+								<TableHead>Price</TableHead>
+								<TableHead>In stock</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>

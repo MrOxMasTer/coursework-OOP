@@ -9,15 +9,6 @@ import {
 	CardDescription,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-	TableCaption,
-	TableHeader,
-	TableRow,
-	TableHead,
-	TableBody,
-	TableCell,
-	Table,
-} from "@/components/ui/table";
 
 import { TabsContent } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
@@ -40,26 +31,26 @@ export const Dashboard = ({ promises }: DashboardProps) => {
 			<TabsContent value="orders">
 				<Card>
 					<CardHeader>
-						<CardTitle>Управление заказами</CardTitle>
-						<CardDescription>Создание и отслеживание заказов</CardDescription>
+						<CardTitle>Orders management</CardTitle>
+						<CardDescription>Creating and tracking orders</CardDescription>
 					</CardHeader>
 					<CardContent>
 						<div className="space-y-4">
 							<div className="grid grid-cols-2 gap-4">
 								<div className="space-y-2">
-									<Label htmlFor="order-id">ID заказа</Label>
+									<Label htmlFor="order-id">ID order</Label>
 									<Input id="order-id" placeholder="Введите ID заказа" />
 								</div>
 								<div className="space-y-2">
-									<Label htmlFor="customer">Клиент</Label>
+									<Label htmlFor="customer">Client</Label>
 									<Input id="customer" placeholder="Имя клиента" />
 								</div>
 							</div>
 							<div className="space-y-2">
-								<Label htmlFor="products">Товары</Label>
+								<Label htmlFor="products">Products</Label>
 								<Input id="products" placeholder="Список товаров" />
 							</div>
-							<Button>Создать заказ</Button>
+							<Button>New order</Button>
 						</div>
 					</CardContent>
 				</Card>

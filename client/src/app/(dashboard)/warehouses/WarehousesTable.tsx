@@ -54,25 +54,25 @@ export const WarehousesTable = ({ warehouses, ...props }: WarehousesProps) => {
 			<Card>
 				<CardHeader className="flex justify-between flex-row gap-8">
 					<div>
-						<CardTitle>Управление складами</CardTitle>
+						<CardTitle>Warehouse management</CardTitle>
 						<CardDescription>
-							Просмотр и редактирование информации о складах
+							View and editing information about warehouses
 						</CardDescription>
 					</div>
 					<Button variant={"outline"} asChild>
-						<Link href="/warehouses/add">Добавить</Link>
+						<Link href="/warehouses/add">Add</Link>
 					</Button>
 				</CardHeader>
 				<CardContent>
 					<Table>
-						<TableCaption>Список активных складов</TableCaption>
+						<TableCaption>List of active warehouses</TableCaption>
 						<TableHeader>
 							<TableRow>
 								<TableHead>ID</TableHead>
-								<TableHead>Название</TableHead>
-								<TableHead>Местоположение</TableHead>
-								<TableHead>Вместимость</TableHead>
-								<TableHead>Действия</TableHead>
+								<TableHead>Name</TableHead>
+								<TableHead>Location</TableHead>
+								<TableHead>Capacity</TableHead>
+								<TableHead>Actions</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>

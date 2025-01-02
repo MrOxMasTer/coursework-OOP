@@ -1,4 +1,4 @@
-import { IsString, MaxLength, IsOptional } from "class-validator";
+import { IsString, MaxLength, IsNumber, IsPositive } from "class-validator";
 
 export class CreateWarehouseDto {
 	@IsString()
@@ -7,6 +7,9 @@ export class CreateWarehouseDto {
 
 	@IsString()
 	@MaxLength(255)
-	@IsOptional()
 	location: string;
+
+	@IsNumber()
+	@IsPositive()
+	capacity: number;
 }

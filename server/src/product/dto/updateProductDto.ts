@@ -12,10 +12,6 @@ export class UpdateProductDto {
 	categoryId: Product["categoryId"];
 
 	@IsOptional()
-	@IsString()
-	shopId: Product["shopId"];
-
-	@IsOptional()
 	@IsNumber()
 	price: Product["price"];
 

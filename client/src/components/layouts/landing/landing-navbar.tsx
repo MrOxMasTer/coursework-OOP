@@ -18,7 +18,7 @@ const LandingNavbar = () => {
 				<li className="text-primary font-medium">
 					<Link href="/">Home</Link>
 				</li>
-				<li>
+				{/* <li>
 					<a href="#features">Features</a>
 				</li>
 				<li>
@@ -41,7 +41,7 @@ const LandingNavbar = () => {
 							))}
 						</DropdownMenuContent>
 					</DropdownMenu>
-				</li>
+				</li> */}
 			</ul>
 
 			<div className="flex items-center gap-2">

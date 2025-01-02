@@ -4,6 +4,7 @@ import { InjectModel } from "@nestjs/sequelize";
 
 import { UpdateOrderDto } from "./dto/updateOrderDto";
 import { CreateOrderDto } from "./dto/createOrderDto";
+import { Op } from "sequelize";
 
 @Injectable()
 export class OrderService {
@@ -11,6 +12,23 @@ export class OrderService {
 		@InjectModel(Order)
 		private orderRepository: typeof Order,
 	) {}
+
+	async count() {
+		const count = await this.orderRepository.count();
+		return count;
+	}
+
+	async activeCount() {
+		const count = await this.orderRepository.count({
+			where: {
+				status: {
+					[Op.or]: ["pending payment", "paid"],
+				},
+			},
+		});
+
+		return count;
+	}
 
 	async create(createOrderDto: CreateOrderDto) {
 		const order = await this.orderRepository.create({ ...createOrderDto });

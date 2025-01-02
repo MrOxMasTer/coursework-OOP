@@ -20,9 +20,6 @@ export class Product extends Model {
 	@Column(DataType.UUID)
 	id!: string;
 
-	@Column({ allowNull: false, field: "shop_id", type: DataType.UUID })
-	shopId!: string;
-
 	@Column({ allowNull: false, type: DataType.STRING(255) })
 	title!: string;
 

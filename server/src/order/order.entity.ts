@@ -20,7 +20,10 @@ export class Order extends Model {
 	@Column({ allowNull: false, field: "order_date", type: DataType.DATE })
 	orderDate!: Date;
 
-	@Column({ allowNull: false, type: DataType.STRING(50) })
+	@Column({
+		allowNull: false,
+		type: DataType.ENUM("pending payment", "paid", "canceled", "done"),
+	})
 	status!: string;
 
 	@CreatedAt

@@ -12,6 +12,12 @@ export class WarehouseService {
 		private warehouseRepository: typeof Warehouse,
 	) {}
 
+	async count() {
+		const count = await this.warehouseRepository.count();
+
+		return count;
+	}
+
 	async create(createWarehouseDto: CreateWarehouseDto) {
 		const warehouse = await this.warehouseRepository.create({
 			...createWarehouseDto,
@@ -24,11 +30,7 @@ export class WarehouseService {
 	}
 
 	async findOne(id: Warehouse["id"]) {
-		return this.warehouseRepository.findOne({
-			where: {
-				id: id,
-			},
-		});
+		return this.warehouseRepository.findByPk(id);
 	}
 
 	async update(id: Warehouse["id"], updateWarehouseDto: UpdateWarehouseDto) {
@@ -44,10 +46,13 @@ export class WarehouseService {
 
 	async remove(id: Warehouse["id"]) {
 		const warehouse = await this.warehouseRepository.findByPk(id);
+
 		if (warehouse) {
 			await warehouse.destroy();
-			return { message: "Warehouse deleted successfully" };
+
+			return warehouse;
 		}
-		return { message: "Warehouse not found" };
+
+		return null;
 	}
 }

@@ -21,6 +21,19 @@ export class OrderController {
 		return this.orderService.create(createOrderDto);
 	}
 
+	@Get("count")
+	async count() {
+		const count = await this.orderService.count();
+		return { count };
+	}
+
+	@Get("activeCount")
+	async activeCount() {
+		const count = await this.orderService.activeCount();
+
+		return { count };
+	}
+
 	@Get()
 	async findAll() {
 		return this.orderService.findAll();

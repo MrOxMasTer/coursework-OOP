@@ -16,8 +16,16 @@ import { Warehouse } from "./warehouse.entity";
 export class WarehouseController {
 	constructor(private readonly warehouseService: WarehouseService) {}
 
+	@Get("count")
+	async count() {
+		const count = await this.warehouseService.count();
+		return { count };
+	}
+
 	@Post()
 	async create(@Body() createWarehouseDto: CreateWarehouseDto) {
+		console.log(createWarehouseDto);
+
 		return this.warehouseService.create(createWarehouseDto);
 	}
 
@@ -41,6 +49,7 @@ export class WarehouseController {
 
 	@Delete(":id")
 	async remove(@Param("id") id: Warehouse["id"]) {
+		console.log("doat");
 		return this.warehouseService.remove(id);
 	}
 }

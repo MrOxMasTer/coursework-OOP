@@ -9,9 +9,6 @@ export class CreateProductDto {
 	@IsString()
 	categoryId: Product["categoryId"];
 
-	@IsString()
-	shopId: Product["shopId"];
-
 	@IsNumber()
 	price: Product["price"];
 }

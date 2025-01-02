@@ -36,11 +36,10 @@ export const useAuth = create(
 					});
 
 					if (response.ok) {
-						const user = await response.json();
-
-						if (user) {
-							set({ user, isAuthenticated: true, loading: false });
-						}
+						// const user = await response.json();
+						// if (user) {
+						// 	set({ user, isAuthenticated: true, loading: false });
+						// }
 					} else {
 						set({ user: null, isAuthenticated: false, loading: false });
 					}

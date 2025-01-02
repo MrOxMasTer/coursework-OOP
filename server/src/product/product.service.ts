@@ -23,7 +23,7 @@ export class ProductService {
 		return this.productRepository.findAll();
 	}
 
-	async count() {
+	async getCount() {
 		return this.productRepository.count();
 	}
 
